@@ -2102,9 +2102,11 @@ def _intersect_line3_sphere(L, S):
     u1 = (-b + sq) / (2 * a)
     u2 = (-b - sq) / (2 * a)
     if not L._u_in(u1):
-        u1 = max(min(u1, 1.0), 0.0)
+        u1 = min(u1, 1.0)
     if not L._u_in(u2):
-        u2 = max(min(u2, 1.0), 0.0)
+        u2 = max(u2, 0.0)
+    if u1 < u2:
+        return None
     return LineSegment3(Point3(L.p.x + u1 * L.v.x,
                                L.p.y + u1 * L.v.y,
                                L.p.z + u1 * L.v.z),

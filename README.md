@@ -3,18 +3,12 @@ pyeuclid
 
 2D and 3D maths module for Python
 
-Fork of [pyeuclid](http://code.google.com/p/pyeuclid/) by Alex Holkner.
-The latest pulled upstream revision is
-[r37](http://code.google.com/p/pyeuclid/source/browse/?r=37#svn%2Ftrunk).
+Fork of [fork of pyeuclid](https://github.com/ezag/pyeuclid) by Alex Holkner, by Eugen Zagorodniy.
 
 Differences with upstream:
 
-- Fixed [#13](http://code.google.com/p/pyeuclid/issues/detail?id=13)
-- Implemented intersection of two circles
-- Implemented finding tangent points on circle
-- Added two methods for facilitating importing 2D affine transformations
-  from external sources
-- New method to convert a `Matrix4` to a `Quaternion`
+- Fixed a Ray3 issue.
+- Was not last updated in 2011 ;-)
 
 Usage
 -----
