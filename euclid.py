@@ -330,6 +330,8 @@ class Vector3:
                                               self.z)
 
     def __eq__(self, other):
+        if other == None:
+            return False
         if isinstance(other, Vector3):
             return self.x == other.x and \
                    self.y == other.y and \
@@ -2406,4 +2408,3 @@ class Plane:
 
     def _connect_plane(self, other):
         return _connect_plane_plane(other, self)
-
